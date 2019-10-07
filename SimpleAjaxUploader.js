@@ -1890,7 +1890,7 @@ ss.XhrUpload = {
 ss.DragAndDrop = {
 
     _dragFileCheck: function( e ) {
-        if ( e.dataTransfer.types ) {
+        if ( e.dataTransfer && e.dataTransfer.types ) {
             for ( var i = 0; i < e.dataTransfer.types.length; i++ ) {
                 if ( e.dataTransfer.types[i] == 'Files' ) {
                     return true;
